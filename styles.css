@@ -399,7 +399,7 @@ body { /* Toda la pagina*/
     gap: 5px;
 }
 
-.tarjeta-de-mokepon {  
+.tarjeta-de-mokepon {
     width: 115px;
     height: 150px;
     background: #E7F6F2;
@@ -455,8 +455,8 @@ a lo mas pequeño*/
     background: transparent;
     color: #2C3333;
     border: 3px solid #2C3333;
-    font-family: 'Silkscreen', cursive;  
-    
+    font-family: 'Silkscreen', cursive;
+
 }
 
 #boton-fuego {
@@ -531,9 +531,14 @@ a lo mas pequeño*/
     border: 7px solid #2C3333;
 }
 
-@media (max-width: 460px) { /*Los cambios en tarjetas en pantallas hasta 360px*/
-    .tarjetas {
+@media (max-width: 360px) { /*Los cambios en tarjetas en pantallas hasta 360px*/
+    #inicio {
         flex-direction: column;
+
+    }
+    .fotoPresentacion
+    {
+        size: 100px;
     }
 
     .tarjetas-ataques {
@@ -548,3 +553,4 @@ a lo mas pequeño*/
         flex-direction: column;
     }
 }
+
