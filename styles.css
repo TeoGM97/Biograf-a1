@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import "compass/css3";
+
+body { /* Toda la pagina*/
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f0f0f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation:fadeIn 5s;
+}
+
+#Cabecera {
+    display: flex;
+    justify-content: center ;
+    justify-content: space-between;
+    height: 135px;
+    z-index: 1;
+    width: 100%;
+    padding: 0px 24px;
+    max-width: 75%;
+    animation:fadeIn 15s;
+
+    color: white;
+    font-family: "Akira Expanded", sans-serif;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px 1rem;
+    height: 100%;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+#Inicio { /*1 */
+    display: flex;
+    flex-direction: column;
+    border: #E7F6F2;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+    margin-bottom: white 5px;
+}
+
+#botonLogo{
+    padding: 7px;
+    display: flex;
+    width: 92px;
+    height: 98px;
+    background: transparent;
+    color: transparent;
+    font-family: 'Silkscreen', cursive;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: stretch;
+    cursor: pointer;
+
+}
+
+#fotoLogo {
+    border: 6px solid #2C3333;
+    width: 50px;
+    height: auto;
+}
+
+#botonEstudios{
+    color: white;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0px 1rem;
+    height: 100%;
+    cursor: pointer;
+    font-weight: 900;
+    text-transform: uppercase;
+    /*transition: transform 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;*/
+}
+
+#botonMusica{
+    color: white;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0px 1rem;
+    height: 100%;
+    cursor: pointer;
+    font-weight: 900;
+    text-transform: uppercase;
+    /*transition: transform 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;*/
+}
+
+#botonProgramacion{
+    color: white;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0px 1rem;
+    height: 100%;
+    cursor: pointer;
+    font-weight: 900;
+    text-transform: uppercase;
+    /*transition: transform 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;*/
+}
+
+#botonEntrenamiento{
+    color: white;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0px 1rem;
+    height: 100%;
+    cursor: pointer;
+    font-weight: 900;
+    text-transform: uppercase;
+    /*transition: transform 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;*/
+}
+
+#botonHobbies{
+    color: white;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0px 1rem;
+    height: 100%;
+    cursor: pointer;
+    font-weight: 900;
+    text-transform: uppercase;
+    /*transition: transform 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;*/
+}
+
+#botonOtros{
+    color: white;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0px 1rem;
+    height: 100%;
+    cursor: pointer;
+    font-weight: 900;
+    text-transform: uppercase;
+    /*transition: transform 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;*/
+}
+
+#Presentacion {   /* 1.2*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #E7F6F2;
+    flex-direction: row;
+}
+
+#nombreBiografia { /*1.2.1*/
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+#nombreGlitch { /* Comienza con .titulo porque hace referencia a una class*/
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+
+
+    font-size: 4rem;
+    font-family: "Akira Expanded", sans-serif;
+    font-weight: 900;
+    color: white;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    margin: 32px 0px 64px;
+    text-align: center;
+    max-width: 75%;
+    text-transform: uppercase;
+    overflow: hidden;
+    /*Falta hacer el efecto de glitch*/
+}
+
+#nombreGlitch::before,
+#nombreGlitch::after{
+    padding: 30px;
+    color: white;
+    content: attr(data-text);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0f0f0f;
+    overflow: hidden;
+    top: 0;
+}
+
+#nombreGlitch:before{
+    left: 3px;
+    text-shadow: -2px 0 red;
+    animation: glitch-1 2s linear infinite reverse;
+}
+
+#nombreGlitch::after{
+    left: 3px;
+    text-shadow: -2px 0 blue;
+    animation: glitch-2 2s linear infinite reverse;
+}
+
+@keyframes glitch-1{
+    0% {
+        clip: rect(132px, auto, 101px, 30px);
+    }
+    5% {
+        clip: rect(17px, auto, 94px, 30px);
+    }
+    10% {
+        clip: rect(40px, auto, 66px, 30px);
+    }
+    15% {
+        clip: rect(87px, auto, 82px, 30px);
+    }
+    20% {
+        clip: rect(137px, auto, 61px, 30px);
+    }
+    25% {
+        clip: rect(34px, auto, 14px, 30px);
+    }
+    30% {
+        clip: rect(133px, auto, 74px, 30px);
+    }
+    35% {
+        clip: rect(76px, auto, 107px, 30px);
+    }
+    40% {
+        clip: rect(59px, auto, 130px, 30px);
+    }
+    45% {
+        clip: rect(29px, auto, 84px, 30px);
+    }
+    50% {
+        clip: rect(22px, auto, 67px, 30px);
+    }
+    55% {
+        clip: rect(67px, auto, 62px, 30px);
+    }
+    60% {
+        clip: rect(10px, auto, 105px, 30px);
+    }
+    65% {
+        clip: rect(78px, auto, 115px, 30px);
+    }
+    70% {
+        clip: rect(105px, auto, 13px, 30px);
+    }
+    75% {
+        clip: rect(15px, auto, 75px, 30px);
+    }
+    80% {
+        clip: rect(66px, auto, 39px, 30px);
+    }
+    85% {
+        clip: rect(133px, auto, 73px, 30px);
+    }
+    90% {
+        clip: rect(36px, auto, 128px, 30px);
+    }
+    95% {
+        clip: rect(68px, auto, 103px, 30px);
+    }
+    100% {
+        clip: rect(14px, auto, 100px, 30px);
+    }
+}
+@keyframes glitch-2{
+    0% {
+        clip: rect(129px, auto, 36px, 30px);
+    }
+    5% {
+        clip: rect(36px, auto, 4px, 30px);
+    }
+    10% {
+        clip: rect(85px, auto, 66px, 30px);
+    }
+    15% {
+        clip: rect(91px, auto, 91px, 30px);
+    }
+    20% {
+        clip: rect(148px, auto, 138px, 30px);
+    }
+    25% {
+        clip: rect(38px, auto, 122px, 30px);
+    }
+    30% {
+        clip: rect(69px, auto, 54px, 30px);
+    }
+    35% {
+        clip: rect(98px, auto, 71px, 30px);
+    }
+    40% {
+        clip: rect(146px, auto, 34px, 30px);
+    }
+    45% {
+        clip: rect(134px, auto, 43px, 30px);
+    }
+    50% {
+        clip: rect(102px, auto, 80px, 30px);
+    }
+    55% {
+        clip: rect(119px, auto, 44px, 30px);
+    }
+    60% {
+        clip: rect(106px, auto, 99px, 30px);
+    }
+    65% {
+        clip: rect(141px, auto, 74px, 30px);
+    }
+    70% {
+        clip: rect(20px, auto, 78px, 30px);
+    }
+    75% {
+        clip: rect(133px, auto, 79px, 30px);
+    }
+    80% {
+        clip: rect(78px, auto, 52px, 30px);
+    }
+    85% {
+        clip: rect(35px, auto, 39px, 30px);
+    }
+    90% {
+        clip: rect(67px, auto, 70px, 30px);
+    }
+    95% {
+        clip: rect(71px, auto, 103px, 30px);
+    }
+    100% {
+        clip: rect(83px, auto, 40px, 30px);
+    }
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+/* Efecto glitch en titulo*/
+
+/* Fin efecto glitch en titulo*/
+
+.subSubtitulo {
+    font-size: 1.5rem;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: rgb(46, 250, 250);
+    text-align: center;
+    text-transform: uppercase;
+    animation:fadeIn 5s;
+
+}
+
+#textoPresentacion{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 64px;
+    text-align: center;
+    max-width: 65%;
+    line-height: 1.5;
+    overflow: hidden;
+    animation: fadeIn 15s;
+
+}
+
+#fotoVertical{
+    height: 800px;
+    width: auto;
+    animation: fadeIn 15s;
+}
+
+.subtitulo {
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+    animation:fadeIn 5s;
+
+    font-size: 4rem;
+    font-family: "Akira Expanded", sans-serif;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    margin: 32px 0px 64px;
+    text-align: center;
+    max-width: 75%;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+/*------------- */
+
+
+
+
+.tarjetas, .tarjetas-ataques{
+    display: flex;
+    gap: 5px;
+}
+
+.tarjeta-de-mokepon {  
+    width: 115px;
+    height: 150px;
+    background: #E7F6F2;
+    padding: 10px;
+    box-sizing: border-box;/*Hace que la caja no se modifique si le agrego el padding*/
+    margin: 10px; /*Si doy 4 valores, puedo darle la margen a cada lado. En el sentido de las manecillas del reloj, comenzando en la parte superior*/
+    border: 3px solid #2C3333;/*Las tres propiedades son el grosor, el tipo de borde y el color*/
+    border-radius: 20px; /*Redondeo de los bordes del boton*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta-de-mokepon img {
+    width: 80px;
+}
+
+#boton-mascota {
+    padding: 10px;
+    width: 130px;
+    height: 45px;
+    border-radius: 28px;
+    margin-top: 10px;
+    background: transparent;
+    color: #2C3333;
+    border: 3px solid #2C3333;
+    font-family: 'Silkscreen', cursive;
+    box-sizing: border-box;
+}
+
+input {
+    display: none; /*Oculta el boton de check de la seleccion de las mascotas*/
+}
+
+input:checked + label {
+    background-color: #395B64;
+}
+
+/*Para la segunda pantalla, y en general para diseñar, se recomienda meter todos los elementos en cajas padre mas grandes y comenzar a diseñar de lo mas grande
+a lo mas pequeño*/
+
+#seleccionar-ataque{
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-de-ataque {
+    width: 80px;
+    height: 45px;
+    border-radius: 23px;
+    margin-top: 10px;
+    background: transparent;
+    color: #2C3333;
+    border: 3px solid #2C3333;
+    font-family: 'Silkscreen', cursive;  
+    
+}
+
+#boton-fuego {
+    background-color: coral;
+}
+
+#boton-agua {
+    background-color:aqua;
+}
+
+#boton-tierra {
+    background-color:#7DCE13;
+}
+
+#mensajes {
+    width: 280px;
+    background-color: #E7F6F2;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#boton-reiniciar {
+    width: 120px;
+    height: 45px;
+    border-radius: 23px;
+    background: #395B64;
+    color: #E7F6F2;
+    border: 3px solid #2C3333;
+    font-family: 'Silkscreen', cursive;
+    justify-content: center;
+}
+
+.ataques {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    gap: 50px;
+}
+
+.ataques-jugador, .ataques-enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#ver-mapa button {
+    padding: 10px;
+    width: 130px;
+    height: 45px;
+    border-radius: 28px;
+    margin-top: 10px;
+    background: transparent;
+    color: #2C3333;
+    border: 3px solid #2C3333;
+    font-family: 'Silkscreen', cursive;
+    box-sizing: border-box;
+}
+
+#mapa {
+    border: 7px solid #2C3333;
+}
+
+@media (max-width: 460px) { /*Los cambios en tarjetas en pantallas hasta 360px*/
+    .tarjetas {
+        flex-direction: column;
+    }
+
+    .tarjetas-ataques {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 300px) {
+    #ver-mapa div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
